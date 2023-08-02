@@ -4,6 +4,7 @@ module.exports = {
         "es2021": true
     },
     "extends": "eslint:recommended",
+    "extends": "airbnb-base",
     "overrides": [
         {
             "env": {
@@ -22,6 +23,10 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"],
+        "no-underscore-dangle": ["error", {
+            "allow": ["_id"]
+        }]
     },
-    "extends": "airbnb-base"
 }
