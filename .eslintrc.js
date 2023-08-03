@@ -1,32 +1,17 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": "eslint:recommended",
     "extends": "airbnb-base",
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"],
-        "no-underscore-dangle": ["error", {
-            "allow": ["_id"]
-        }]
-    },
-}
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+      "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+      "eol-last": 0,
+      "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+      "linebreak-style": 0,
+      "quotes": ["error", "double"],
+      "error": {
+        "ObjectExpression": { "consistent": true, "multiline": true },
+        "ObjectPattern": { "consistent": true, "multiline": true },
+        "ImportDeclaration": "never",
+        "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+      }
+    }
+  }
