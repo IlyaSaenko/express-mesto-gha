@@ -59,9 +59,7 @@ const createUser = (req, res) => {
 
 //Редактирование информации пользователя
 const updateUserInfo = (req, res) => {
-	const userId = req.user._id;
 	const { name, about } = req.body;
-	console.log("userId - " + userId)
 	console.log("name - " + name)
 	console.log("about - " + about)
 
