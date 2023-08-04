@@ -12,7 +12,7 @@ const getUsers = (req, res) => {
 			res.status(200).send(users);
 		})
 		.catch((error) =>
-			res.status(ERROR_INTERNAL_SERVER).send({ message: "An error occured on the server, please try again later" })
+			res.status(ERROR_INTERNAL_SERVER).send({ message: "На сервере произошла ошибка" })
 		);
 };
 
@@ -35,7 +35,7 @@ const getUserId = (req, res) => {
 					.status(ERR_BAD_REQUEST)
 					.send({ message: "User is not found" });
 			}
-			res.status(ERROR_INTERNAL_SERVER).send({ message: "An error occured on the server, please try again later" });
+			res.status(ERROR_INTERNAL_SERVER).send({ message: "На сервере произошла ошибка" });
 		});
 };
 
@@ -53,7 +53,7 @@ const createUser = (req, res) => {
 			}
 			return res
 				.status(ERROR_INTERNAL_SERVER)
-				.send({ message: "An error occured on the server, please try again later" });
+				.send({ message: "На сервере произошла ошибка" });
 		});
 };
 
@@ -75,7 +75,7 @@ const updateUserInfo = (req, res) => {
 					message: "Your personal details were not entered correctly",
 				});
 			}
-			res.status(ERROR_INTERNAL_SERVER).send({ message: "An error occured on the server, please try again later" });
+			res.status(ERROR_INTERNAL_SERVER).send({ message: "На сервере произошла ошибка" });
 		});
 };
 
@@ -99,7 +99,7 @@ const updateAvatar = (req, res) => {
 			}
 			return res
 				.status(ERROR_INTERNAL_SERVER)
-				.send({ message: "An error occured on the server, please try again later" });
+				.send({ message: "На сервере произошла ошибка" });
 		});
 };
 

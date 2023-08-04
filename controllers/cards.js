@@ -20,7 +20,7 @@ const getCards = (req, res) => {
 	Card.find({})
 		.then((cards) => res.status(200).send(cards))
 		.catch(() => {
-			res.status(ERROR_INTERNAL_SERVER).send({ message: "An error occured on the server, please try again later" });
+			res.status(ERROR_INTERNAL_SERVER).send({ message: "На сервере произошла ошибка" });
 		});
 };
 
@@ -48,7 +48,7 @@ const createCard = (req, res) => {
 			}
 			return res
 				.status(ERROR_INTERNAL_SERVER)
-				.send({ message: "An error occured on the server, please try again later" });
+				.send({ message: "На сервере произошла ошибка" });
 		});
 };
 
@@ -68,7 +68,7 @@ const setLikeCard = (req, res) => {
 			}
 			return res
 				.status(ERROR_INTERNAL_SERVER)
-				.send({ message: "An error occured on the server, please try again later" });
+				.send({ message: "На сервере произошла ошибка" });
 		});
 };
 
@@ -88,7 +88,7 @@ const setDislikeCard = (req, res) => {
 			}
 			return res
 				.status(ERROR_INTERNAL_SERVER)
-				.send({ message: "An error occured on the server, please try again later" });
+				.send({ message: "На сервере произошла ошибка" });
 		});
 };
 
@@ -104,7 +104,7 @@ const deleteCard = (req, res) => {
 					.status(ERR_BAD_REQUEST)
 					.send({ message: "Card is not found" });
 			}
-			res.status(ERROR_INTERNAL_SERVER).send({ message: "An error occured on the server, please try again later" });
+			res.status(ERROR_INTERNAL_SERVER).send({ message: "На сервере произошла ошибка" });
 		});
 };
 
