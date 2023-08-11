@@ -3,11 +3,11 @@ const { celebrate, Joi } = require('celebrate');
 const { URL_REGEX } = require('../utils/constants');
 
 const {
-	getUsers,
-	getUserId,
-	createUser,
-	updateUserInfo,
-	updateAvatar
+  getUsers,
+  getUserId,
+  getCurrentUserInfo,
+  updateUserInfo,
+  updateAvatar
 } = require("../controllers/users");
 
 router.get('/', getUsers);
@@ -18,7 +18,7 @@ router.get('/:userId', celebrate({
   }),
 }), getUserId);
 
-router.get('/me', createUser);
+router.get('/me', getCurrentUserInfo);
 
 router.patch('/me', celebrate({
   body: Joi.object().keys({

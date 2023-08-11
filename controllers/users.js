@@ -2,6 +2,7 @@ const User = require("../models/user");
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const { SUPER_SECRET_KEY } = require('../utils/constants');
 console.log(jwt);
 const BadRequestError = require('../errors/badRequestError');
 const NotFoundError = require('../errors/notFoundError');
@@ -144,7 +145,7 @@ const login = (req, res, next) => {
 			if (!email || !password) {
 				next(new UnauthorizedError('Ошибка авторизации'));
 			}
-			const token = jwt.sign({ _id: user._id }, 'super-secret-key', { expiresIn: '7d' });
+			const token = jwt.sign({ _id: user._id }, SUPER_SECRET_KEY, { expiresIn: '7d' });
 			return res
 				.cookie('jwt', token, {
 					maxAge: 3600000,
