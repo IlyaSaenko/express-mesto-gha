@@ -68,14 +68,14 @@ const removeLikeCard = (req, res, next) => {
 
 const deleteCard = (req, res, next) => {
 	const { cardId } = req.params;
-
-	Card.findById(cardId)
+	Card.findByIdAndUpdate(cardId)
 		.orFail(() => new NotFoundError('Карточка не найдена'))
 		.then((card) => {
 			if (!card.owner.equals(req.user._id)) {
 				return next(new ForbiddenError('Нет прав для удаления данной карточки'));
 			}
-			return card.remove()
+			return card.deleteOne()
+
 				.then(() => res.send({ message: 'Карточка удалена' }));
 		})
 		.catch((err) => {
