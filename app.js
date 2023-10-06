@@ -12,8 +12,6 @@ const limiter = require('./middlewares/reqLimiter');
 const { createUser, login } = require('./controllers/users');
 const { URL_REGEX } = require('./utils/constants');
 
-//_id: '64cb9c66d62b40265b12319d'
-
 const { PORT = 3000 } = process.env;
 const app = express();
 
