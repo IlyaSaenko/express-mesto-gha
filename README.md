@@ -7,12 +7,10 @@
 
 - [Обзор проекта](#обзор-проекта)
   - [Задачи проекта](#задачи-проекта)
+  - [Используемые технологии](#используемые-технологии)
   - [Функциональность проекта](#функциональность-проекта)
   - [Директории проекта](#директории-проекта)
   - [Запуск проекта](#запуск-проекта)
-  - [Ссылки](#ссылки)
-- [Ход выполнения проекта](#ход-выполнения-проекта)
-  - [Используемые технологии](#используемые-технологии)
   - [Полученный опыт](#чему-я-научился-работая-над-проектом)
 - [Автор](#автор)
 
@@ -21,6 +19,13 @@
 ### Задачи проекта
 
 Главнми задачами проекты были: усвоение основ backend-разработки и применение на практике, развернув сервер на Node.js и Express.
+
+### Используемые технологии:
+
+![Express](https://img.shields.io/badge/-Express-090909?style=for-the-badge&logo=Express)
+![Node.js](https://img.shields.io/badge/-Node.js-090909?style=for-the-badge&logo=Node.js)
+![MongoDB](https://img.shields.io/badge/-MongoDB-090909?style=for-the-badge&logo=MongoDB)
+![Postman](https://img.shields.io/badge/-Postman-090909?style=for-the-badge&logo=Postman)
 
 ### Функциональность проекта
 
@@ -65,13 +70,6 @@
 
 `npm run start` — запускает сервер   
 `npm run dev` — запускает сервер с hot-reload
-
-### Используемые технологии:
-
-![Express](https://img.shields.io/badge/-Express-090909?style=for-the-badge&logo=Express)
-![Node.js](https://img.shields.io/badge/-Node.js-090909?style=for-the-badge&logo=Node.js)
-![MongoDB](https://img.shields.io/badge/-MongoDB-090909?style=for-the-badge&logo=MongoDB)
-![Postman](https://img.shields.io/badge/-Postman-090909?style=for-the-badge&logo=Postman)
 
 ### Полученный опыт
 
